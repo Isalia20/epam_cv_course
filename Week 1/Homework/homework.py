@@ -79,6 +79,7 @@ def main(detector_func, matcher):
 
 
 if __name__ == "__main__":
+    # Create different sift and matcher to try different ones here
     sift = cv2.SIFT_create().detectAndCompute
     matcher = cv2.BFMatcher()
     colored_img_result_half, colored_img_result_quarter = main(sift, matcher)
