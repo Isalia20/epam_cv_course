@@ -83,7 +83,5 @@ if __name__ == "__main__":
     matcher = cv2.BFMatcher()
     colored_img_result_half, colored_img_result_quarter = main(sift, matcher)
     # Show images
-    cv2.imshow("colored_img_half", colored_img_result_half)
-    cv2.imshow("colored_img_quarter", colored_img_result_quarter)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    cv2.imwrite("processed_half.jpg", colored_img_result_half)
+    cv2.imwrite("processed_quarter.jpg", colored_img_result_quarter)
