@@ -53,7 +53,7 @@ def get_points(image_dir):
 
 
 image_dir="Week 1/Homework/chessboard_images"
-image_path="/Users/iraklisalia/Desktop/epam_cv_course/epam_cv_course/Week 1/Homework/chessboard_images/Im_L_1.png"
+image_path="Week 1/Homework/chessboard_images/Im_L_1.png"
 objpoints, imgpoints, gray_shape = get_points(image_dir)
 ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray_shape, None, None)
 
@@ -84,7 +84,7 @@ objp[:,:2] = np.mgrid[0:CHECKERBOARD[0], 0:CHECKERBOARD[1]].T.reshape(-1, 2)
 axis = np.float32([[3,0,0], [0,3,0], [0,0,-3]]).reshape(-1,3)
 
 
-for fname in glob.glob('/Users/iraklisalia/Desktop/epam_cv_course/epam_cv_course/Week 1/Homework/chessboard_images/*.png'):
+for fname in glob.glob('Week 1/Homework/chessboard_images/*.png'):
     img = cv2.imread(fname)
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     ret, corners = cv2.findChessboardCorners(gray,
